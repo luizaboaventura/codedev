@@ -1,0 +1,152 @@
+body {
+  background: #f1f1f1;
+  font-family: 'Roboto', 'sans-serif';
+}
+
+.container {
+  height: 100%;
+  margin: auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+.container-home {
+  height: calc(100vh - 150px);
+  margin: auto;
+  max-width: 900px;
+}
+
+/* NAVBAR */
+.logo{
+  width: 200px;
+}
+
+.button-register{
+  background-color: #7030A0;
+}
+
+.button-login{
+  background-color: #258f23;
+}
+
+/* BANNER */
+.banner {
+  width: 100%;
+  background-color: #fff;
+  padding: 50px;
+}
+
+.banner-container {
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.slogan {
+  color: #7030A0;
+  font-size: 2.2em;
+}
+
+.programming {
+  max-width: 400px;
+}
+
+/* COURSE */
+.button-green {
+  background-color: #37AB35;
+  color: #fff;
+}
+
+.button-green:hover {
+  background-color: #258f23;
+  color: #fff;
+}
+
+/* TEACHER */
+.container-image {
+  text-align: center;
+}
+
+.teacher-image {
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat; 
+	border-radius: 100%;
+	margin: 0 auto;
+	height: 200px;
+	width: 200px;
+}
+
+.teacher-image01 {
+  background-image: url('../assets/img/fernanda.jpg'); 
+}
+
+.teacher-image02 {
+  background-image: url('../assets/img/kaue.jpg'); 
+}
+
+.teacher-image03 {
+  background-image: url('../assets/img/isabel.jpg'); 
+}
+
+/* STATEMENT */
+.statement {
+  padding: 20px;
+  & .statement-text {
+    font-style: italic;
+    text-align: justify;
+  }
+}
+
+/* ABOUT */
+.about {
+  width: 100%;
+  background-color: #fff;
+  padding: 50px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.icon-green {
+  color: #37AB35;
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding-top: 16px;
+  & .copyright {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.container-icons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 16px;
+  gap: 16px;
+}
+
+footer .icon, footer .email {
+  cursor: pointer;
+}

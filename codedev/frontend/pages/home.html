@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Dev | Escola de Programação</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <!-- link do bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-black navbar-dark">
+      <div class="container-fluid">
+        <img src="../assets/img/logo_codedev.png" class="logo">
+      </div>
+    </nav>
+
+    <div class="container-home p-5">
+      <h4 class="text-center">Atualizar Cadastro:</h4>
+      <form class="row g-2 p-5" id="updateForm">
+        <div class="col-12 col-sm-6">
+          <label for="nameUpdate" class="form-label">Nome Completo</label>
+          <input type="text" class="form-control rounded-0" id="nameUpdate" 
+           />
+          <div class="invalid-feedback">Informe um nome válido (pelo menos 2 letras).</div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <label for="emailUpdate" class="form-label">Email</label>
+          <input type="email" class="form-control rounded-0" id="emailUpdate" />
+          <div class="invalid-feedback">Informe um email válido.</div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <label for="passwordUpdate" class="form-label">Senha</label>
+          <input type="password" class="form-control rounded-0" id="passwordUpdate" />
+          <div class="invalid-feedback">Informe uma senha válida (pelo menos 6 caracteres).</div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <label for="passwordAgainUpdate" class="form-label"
+            >Confirmação da senha</label
+          >
+          <input
+            type="password"
+            class="form-control rounded-0"
+            id="passwordAgainUpdate"
+          
+          />
+          <div class="invalid-feedback">Deve coincidir com a senha digitada.</div>
+        </div>
+        <div class="col-12 text-center pt-3">
+          <button type="button" class="btn rounded-0">Cancelar</button>
+          <button type="submit" class="btn button-green rounded-0">Confirmar</button>
+        </div>
+      </form>
+
+      <form class="row g-2 pb-5">
+        <div class="col-12 text-center">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger rounded-0">EXCLUIR CONTA</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- DELETE LOGIN -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-2">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir conta</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container_form">
+              <form class="row g-2" id="deleteForm">
+                <div class="col-12">
+                  Deseja realmente excluir a conta? Essa ação não poderá ser desfeita.
+                </div>
+                <div class="col-12 text-center pt-3">
+                  <button type="button" class="btn rounded-0" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-danger rounded-0">EXCLUIR</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <footer>
+      <div class="container-icons">
+        <div class="icons">
+          <i class="bi bi-instagram icon"></i>
+          <i class="bi bi-discord icon"></i>
+          <i class="bi bi-whatsapp icon"></i>
+        </div>
+        <p class="email">contato@codedev.com.br</p>
+      </div>
+      <p class="copyright">©️ <strong>Code Dev</strong> | Escola de programação - 2024. TODOS OS DIREITOS RESERVADOS.</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/update.js"></script>
+    <script src="../js/delete.js"></script>
+  </body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Dev | Escola de Programação</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <!-- link do bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-black navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./assets/img/logo_codedev.png" class="logo"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#courses">Cursos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#teachers">Instrutores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#statement">Depoimentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Sobre a Code Dev</a>
+            </li>
+          </ul>
+           
+          <button class="button-register btn btn-outline-light rounded-0 me-2" data-bs-toggle="modal" data-bs-target="#registerModal" type="button">Criar conta</button> 
+          <button class="button-login btn btn-outline-light rounded-0" data-bs-toggle="modal" data-bs-target="#loginModal" type="button">Entrar</button> 
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- MODAL CADASTRO -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-2">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Criar conta</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container_form">
+              <form class="row g-2" id="form">
+                <div class="col-12">
+                  <label for="name" class="form-label">Nome Completo</label>
+                  <input type="text" class="form-control rounded-0" id="name" 
+                   />
+                  <div class="invalid-feedback">Informe um nome válido (pelo menos 2 letras).</div>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control rounded-0" id="email" />
+                  <div class="invalid-feedback">Informe um email válido.</div>
+                </div>
+                <div class="col-12">
+                  <label for="password" class="form-label">Senha</label>
+                  <input type="password" class="form-control rounded-0" id="password" />
+                  <div class="invalid-feedback">Informe uma senha válida (pelo menos 6 caracteres).</div>
+                </div>
+                <div class="col-12">
+                  <label for="password-again" class="form-label"
+                    >Confirmação da senha</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control rounded-0"
+                    id="password-again"
+                  
+                  />
+                  <div class="invalid-feedback">Deve coincidir com a senha digitada.</div>
+                </div>
+                <div class="col-12 text-center pt-3">
+                  <button type="button" class="btn rounded-0" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn button-green rounded-0">Confirmar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL LOGIN -->
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content rounded-2">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Acessar conta</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container_form">
+                <form class="row g-2" id="loginForm">
+                  <div class="col-12">
+                    <label for="emailLogin" class="form-label">Email</label>
+                    <input type="email" class="form-control rounded-0" id="emailLogin" />
+                    <div class="invalid-feedback">Informe um email válido.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="passwordLogin" class="form-label">Senha</label>
+                    <input type="password" class="form-control rounded-0" id="passwordLogin" />
+                    <div class="invalid-feedback">Informe uma senha válida (pelo menos 6 caracteres).</div>
+                  </div>
+                  <div class="col-12 text-center pt-3">
+                    <button type="button" class="btn rounded-0" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn button-green rounded-0">Entrar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+
+    <!-- BANNER -->
+    <section class="banner h-sm-200 h-md-250 shadow-sm">
+      <div class="banner-container">
+        <div class="col-12 col-md-6 text-center">
+          <h2 class="slogan fw-bold">Programar é criar o futuro.</h2>
+          <p>Aprenda com os melhores e alcance seus objetivos.</p>
+        </div>
+        <img src="./assets/img/programming.png" class="programming col-md-6 d-none d-md-block pe-2">
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- CURSOS -->
+      <section id="courses" class="pt-5">
+        <h4 class="text-center">Cursos:</h4>
+        <div class="row my-1 g-4">
+          <div class="col-12 col-md-4">
+            <div class="card rounded-0 shadow-sm">
+              <img src="./assets/img/html-css.png" alt="html">
+              <div class="card-body">
+                <h6 class="card-title py-2">HTML e CSS Iniciante</h6>
+                <a href="#courses" class="btn button-green rounded-0">Ver mais</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-4">
+            <div class="card rounded-0 shadow-sm">
+              <img src="./assets/img/html-css.png" alt="html">
+              <div class="card-body">
+                <h6 class="card-title py-2">HTML e CSS Avançado</h6>
+                <a href="#courses" class="btn button-green rounded-0">Ver mais</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-4">
+            <div class="card rounded-0 shadow-sm">
+              <img src="./assets/img/js.png" alt="html">
+              <div class="card-body">
+                <h6 class="card-title py-2">JS Iniciante e Intermediário</h6>
+                <a href="#courses" class="btn button-green rounded-0">Ver mais</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-4">
+            <div class="card rounded-0 shadow-sm">
+              <img src="./assets/img/js.png" alt="html">
+              <div class="card-body">
+                <h6 class="card-title py-2">JS Avançado</h6>
+                <a href="#courses" class="btn button-green rounded-0">Ver mais</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-4">
+            <div class="card rounded-0 shadow-sm">
+              <img src="./assets/img/php.png" alt="html">
+              <div class="card-body">
+                <h6 class="card-title py-2">PHP Iniciante e Intermediário</h6>
+                <a href="#courses" class="btn button-green rounded-0">Ver mais</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-4">
+            <div class="card rounded-0 shadow-sm">
+              <img src="./assets/img/php.png" alt="html">
+              <div class="card-body">
+                <h6 class="card-title py-2">PHP Avançado</h6>
+                <a href="#courses" class="btn button-green rounded-0">Ver mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INSTRUTORES -->
+      <section id="teachers" class="pt-5">
+        <h4 class="text-center">Instrutores:</h4>
+        <div class="row my-1 g-4">
+          <div class="container-image col-12 col-md-4">
+            <div class="teacher-image teacher-image01 shadow-sm"></div>
+            <h6 class="pt-3">Fernanda dos Santos</h6>
+            <p>Front-end</p>
+          </div>
+          <div class="container-image col-12 col-md-4">
+            <div class="teacher-image teacher-image02 shadow-sm"></div>
+            <h6 class="pt-3">Kauê Davi Araújo</h6>
+            <p>Back-end</p>
+          </div>
+          <div class="container-image col-12 col-md-4">
+            <div class="teacher-image teacher-image03 shadow-sm"></div>
+            <h6 class="pt-3">Isabel Bruna Melo</h6>
+            <p>Back-end</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEPOIMENTOS -->
+      <section id="statement" class="py-5">
+        <h4 class="text-center">Depoimentos dos alunos:</h4>
+        <div class="row my-1 g-4">
+
+          <div class="col-12 col-md-4">
+            <div class="card rounded-0 shadow-sm">
+              <div class="statement">
+                <p class="statement-text">"Estou no início da faculdade e decidi complementar meus estudos com os cursos da CodeDev. Foi incrível ver como os conceitos que aprendo na sala de aula são aplicados de forma prática."</p>
+                <p><strong>Amanda, Estudante de Ciência da Computação</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card rounded-0 shadow-sm">
+              <div class="statement">
+                <p class="statement-text">"O curso de PHP da CodeDev foi uma virada de jogo na minha carreira. Aprendi não apenas a codificar, mas a pensar de forma lógica e a resolver problemas de maneira eficiente."</p>
+                <p><strong>Lucas, Desenvolvedor</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card rounded-0 shadow-sm">
+              <div class="statement">
+                <p class="statement-text">"Trabalho com análise de sistemas há muitos anos, mas sempre tive dificuldade em entender o lado prático da programação. O curso de JS me ajudou a preencher essa lacuna e agora consigo trabalhar de forma mais eficiente."</p>
+                <p><strong>Marcos, Analista de Sistemas</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- SOBRE A EMPRESA -->
+    <section id="about" class="about pt-5 shadow-sm">
+      <div class="about-container">
+        <h4 class="text-center">Sobre a Code Dev:</h4>
+
+        <div class="row my-1">
+          <div class="col-12 col-md-6 text-center">
+            <div class="py-3"><i class="icon-green bi bi-building fs-1"></i></div>
+            <p>A <strong>Code Dev - Escola de Programação</strong> foi fundada em 2015 com o objetivo de oferecer uma educação de alta qualidade em programação. Desde então, temos sido dedicados a capacitar nossos alunos a se tornarem programadores talentosos e bem-sucedidos.</p>
+          </div>
+
+          <div class="col-12 col-md-6 text-center">
+            <div class="py-3"><i class="icon-green bi bi-rocket-takeoff fs-1"></i></div>
+            <p>Nossa <strong>missão</strong> é proporcionar uma experiência educacional transformadora, oferecendo cursos práticos e atualizados que atendam às demandas do mercado de tecnologia. Buscamos inspirar e capacitar nossos alunos a alcançarem seu pleno potencial como programadores.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="container-icons">
+        <div class="icons">
+          <i class="bi bi-instagram icon"></i>
+          <i class="bi bi-discord icon"></i>
+          <i class="bi bi-whatsapp icon"></i>
+        </div>
+        <p class="email">contato@codedev.com.br</p>
+      </div>
+      <p class="copyright">©️ <strong>Code Dev</strong> | Escola de programação - 2024. TODOS OS DIREITOS RESERVADOS.</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <script src="./js/register.js"></script>
+  <script src="./js/login.js"></script>
+</html>
